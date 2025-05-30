@@ -1,0 +1,7 @@
+<suite name="DemoSuite">
+	<test name="AutomationStepDef">
+		<classes>
+			<class name="StepDeifnition.AutomationStepDef" />
+		</classes>
+	</test>
+</suite>
