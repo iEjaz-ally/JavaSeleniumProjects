@@ -348,7 +348,6 @@ public class AutomationDemom {
 				names.put(nameList[0], nameList[1]);
 			}
 			Set<String> firstName = names.keySet();
-		//	JavascriptExecutor js = (JavascriptExecutor)driver;
 			System.out.println(names+" "+ firstName);
 			Actions act = new Actions(driver);
 			for(String first :firstName) {
@@ -361,7 +360,6 @@ public class AutomationDemom {
 				Thread.sleep(3000);
 				act.sendKeys(Keys.PAGE_DOWN).build().perform();				
 				WebElement firstNameOfEmployee = driver.findElement(By.xpath("//div[text()='"+first.trim()+"']"));
-				System.out.println("Not null");
 				WebElement lastName = driver.findElement(By.xpath("//div[text()='"+names.get(first).trim()+"']"));
 			 assertEquals(firstNameOfEmployee.getText().trim(), first.toString().trim(), "First and Middle Name doesn't match");
 			 assertEquals(lastName.getText().trim(), names.get(first).trim() , "First and Middle Name doesn't match");
